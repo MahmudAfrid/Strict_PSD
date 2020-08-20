@@ -1,0 +1,412 @@
+/*
+       Master Stylesheet
+    =======================
+    Template Name: Strict HTML Template;
+    Author: Mahmudul Islam AFriD;
+    Description: Minimal Blog Template;
+    Version: 1.0.0;
+    Tag: blog, two column;
+
+*/
+
+/* 
+        Table Of Content
+    ========================
+    1.Typography
+    2. Header
+    3. Banner
+    4. First Post
+    5. Gallery
+    6. Contact
+    7. Footer
+*/
+
+
+
+
+/*  ====================
+        Typography
+    ====================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Ubuntu:wght@300&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'lato', serif;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    font-family: 'lato', serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #2d3950;
+}
+
+p{
+    font-family: 'lato', serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    color: #999999;
+}
+a{
+    font-family: 'lato', serif;
+    text-decoration: none;
+    color: #2d3950;
+}
+/*============================
+    Header Style Start Here
+=============================*/
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+header{
+    padding: 20px 0px;
+    background: #f6f9f9;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu nav ul li{
+    display: inline-block;
+}
+.menu nav ul li a{
+    padding: 0px 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #2d3950;
+    font-weight: 500;
+}
+.menu nav ul li a:hover{
+    color: #15a4fa;
+    transition: 0.3s all ease-in-out;
+}
+
+/*=============================
+    Banner Style Start Here
+==============================*/
+#banner{
+    background-image: url(../images/banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.banner-content h2{
+    font-size: 120px;
+    line-height: 125px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+.banner-content span{
+    display: block;
+    border-bottom: 2px solid #15a4fa;
+    width: 55%;
+    margin: 0 auto;
+}
+.banner-content p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    padding: 25px 0px 50px;
+}
+.banner-content button{
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: 1px solid #15a4fa;
+    padding: 20px 15px;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.banner-content button::after{
+    content: '';
+    position: absolute;
+    background-color: #15a4fa;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s all ease-in-out;
+}
+.banner-content button:hover::after{
+    width: 100%;
+}
+.banner-content .scroll-icon a{
+    font-size: 35px;
+    line-height: 35px;
+    color: #fff;
+    display: block;
+    transform: translate(0px, 80px);
+    -webkit-transform: translate(0px, 80px);
+    -moz-transform: translate(0px, 80px);
+    animation: scroll-icon;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes scroll-icon{
+    0%{
+        transform: translate(0px, 80px);
+        -webkit-transform: translate(0px, 80px);
+        -moz-transform: translate(0px, 80px);
+    }
+    100%{
+        transform: translate(0px, 150px);
+        -webkit-transform: translate(0px, 150px);
+        -moz-transform: translate(0px, 150px);
+    }
+}
+/*=============================
+    About Style Start Here
+==============================*/
+#about-section{
+    background-color: #f6f9f9;
+    text-align: center;
+    padding: 80px 0px;
+}
+.about h2{
+    font-size: 40px;
+}
+.about p{
+    font-size: 20px;
+    line-height: 25px;
+    padding: 10px 0px;
+}
+/*=============================
+    Service Style Start Here
+==============================*/
+#services{
+    padding: 70px 0px;
+}
+.service-container{
+    display: flex;
+    justify-content: space-between;
+}
+.service-item{
+    width: 25%;
+    text-align: center;
+}
+.service-icon span{
+    font-size: 60px;
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#48baff+50,5fc3ff+50 */
+    background: #48baff; /* Old browsers */
+    background: -moz-linear-gradient(left,  #48baff 50%, #5fc3ff 50%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #48baff 50%,#5fc3ff 50%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #48baff 50%,#5fc3ff 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48baff', endColorstr='#5fc3ff',GradientType=1 ); /* IE6-9 */
+
+}
+.service-content h4{
+    font-size: 24px;
+    color: #2d3950;
+    padding-top: 20px;
+}
+.service-content p{
+    font-size: 15px;
+}
+/*=============================
+    Gallery Style Start Here
+==============================*/
+#gallery{
+    background-color: #f6f9f9;
+    padding: 70px 0px;
+}
+.heading{
+    text-align: center;
+}
+.heading h2{
+    font-size: 42px;
+    line-height: 46px;
+    color: #2d3950;
+}
+.gallery-container{
+    padding-top: 50px;
+}
+.gallery-box{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px 0;
+}
+.gallery-item{
+    width: 31%;
+    position: relative;
+    cursor: pointer;
+}
+.thumbnail img{
+    width: 100%;
+}
+.gallery-item:hover .thumbnail::after{
+    width: 100%;
+}
+.thumbnail::after{
+    content: "";
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    background-color: #2cacf7d4;
+    position: absolute;
+    transition-duration: 0.6s;
+}
+.gallery-item:hover .gallery-icon{
+    top: 50%;
+    transition-duration: 0.8s;
+    opacity: 1;
+}
+.gallery-icon{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.gallery-icon ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.gallery-icon ul li{
+    list-style: none;
+    height: 42px;
+    width: 42px;
+    line-height: 42px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    margin: 0 10px;
+    color: #fff;
+}
+
+/*==================================
+        Contact start here
+===================================*/
+#contact{
+    padding: 70px 0;
+    background-image: url(../images/contact.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+#contact::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2c374ad1;
+    z-index: -1;
+}
+#contact .title h2{
+    color: #fff;
+}
+.form{
+    width: 50%;
+    margin: 0 auto;
+}
+form input,textarea{
+    width: 90%;
+    background: transparent;
+    border: 1px solid #999;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    outline: none;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+form input:hover{
+    border: 1px solid #15a4fa;
+}
+form textarea:hover{
+    border: 1px solid #15a4fa;
+}
+form textarea{
+    height: 160px;
+}
+.design{
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    margin-top: 10px;
+}
+.left input{
+    width: auto;
+    margin-right: 10px;
+}
+.left span{
+    font-size: 15px;
+    color: #fff;
+}
+.right button{
+    padding: 15px 50px;
+}
+/*==================================
+        Contact end here
+===================================*/
+#footer-section{
+    background: #f6f9f9;
+    padding: 20px 0px;
+    width: 100%;
+    float: left;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.legal{
+    width: 50%;
+    float: left;
+}
+.social-link{
+    width: 50%;
+    float: left;
+    text-align: right;
+}
+.social-link ul{
+    padding: 0px;
+}
+.social-link ul li{
+    list-style: none;
+    display: inline;
+    margin: 0px 5px;
+}
+.social-link .fab{
+    background: #15a4fa;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    line-height: 40px;
+    border-radius: 2px;
+    transition: 0.3s all ease-in-out;
